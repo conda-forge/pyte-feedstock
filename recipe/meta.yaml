@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     # according to setup.py this is needed to build
     - pytest-runner
   run:
-    - python
+    - python >=3.6
     # requirements from setup.py
     - wcwidth
 
@@ -31,7 +31,7 @@ test:
 
 about:
   home: http://github.com/selectel/pyte
-  license: LGPL-3.0
+  license: LGPL-3.0-only
   license_file: LICENSE
   summary: Simple VTXXX-compatible linux terminal emulator
   description: |
