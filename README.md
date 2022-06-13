@@ -3,7 +3,7 @@ About pyte
 
 Home: http://github.com/selectel/pyte
 
-Package license: LGPL-3.0
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyte-feedstock/blob/main/LICENSE.txt)
 
