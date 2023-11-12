@@ -1,5 +1,5 @@
 {% set name = "pyte" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b9bfd1b781759e7572a6e553c010cc93eef58a19d8d1590446d84c19b1b097b0
+  sha256: 5af970e843fa96a97149d64e170c984721f20e52227a2f57f0a54207f08f083f
 
 build:
   noarch: python
