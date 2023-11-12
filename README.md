@@ -1,11 +1,11 @@
-About pyte
-==========
+About pyte-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyte-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/selectel/pyte
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyte-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simple VTXXX-compatible linux terminal emulator
 
