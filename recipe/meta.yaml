@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b9bfd1b781759e7572a6e553c010cc93eef58a19d8d1590446d84c19b1b097b0
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     # according to setup.py this is needed to build
     - pytest-runner
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     # requirements from setup.py
     - wcwidth
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyte
 
