@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5af970e843fa96a97149d64e170c984721f20e52227a2f57f0a54207f08f083f
 
 build:
@@ -16,18 +16,24 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
     # according to setup.py this is needed to build
     - pytest-runner
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     # requirements from setup.py
     - wcwidth
 
 test:
   imports:
     - pyte
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
   home: http://github.com/selectel/pyte
@@ -46,3 +52,5 @@ about:
 extra:
   recipe-maintainers:
     - saraedum
+    - synapticarbors
+    - claudiushaag
